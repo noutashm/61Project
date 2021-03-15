@@ -7,12 +7,65 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+            background-color: #262626;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ff3838;
+            transform: rotate(45deg);
+            animation: heartbeat 1.4s linear infinite
+        }
+
+        .heart:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff3838;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .heart:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff3838;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: rotate(45deg) scale(1); }
+            25% { transform: rotate(45deg) scale(1); }
+            30% { transform: rotate(45deg) scale(1.4); }
+            50% { transform: rotate(45deg) scale(1.2); }
+            70% { transform: rotate(45deg) scale(1.4); }
+            100% { transform: rotate(45deg) scale(1); }
+        }
+    </style>
 
     <title>Week 3</title>
 </head>
 <body>
 
 <div id="storyboard-animation">
+    <div class="heart"></div>
 
 </div>
 
