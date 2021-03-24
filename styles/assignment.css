@@ -2,14 +2,64 @@
     padding: 0;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-/* Part 1 Animation Start */
+li {
+    display: flex;
+    align-items: center;
+    float: left;
+}
 
-.two-piha,
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    color: lightblue;
+}
+
+
+/* Part 1 */
+
+.part-one {
+    overflow: hidden;
+    position: relative;
+    height: 230px;
+}
+
+.part-one img {
+    position: absolute;
+}
+
+.two-piha {
+    transform: translateY(100%);
+    animation: bottom-to-top 2.5s 1s forwards;
+}
+
 .three-piha {
-    display: none;
+    transform: translateX(100%);
+    animation: bottom-to-top 4s 4s forwards;
 }
 
 @keyframes bottom-to-top {
-    transform: translateY(100%);
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes left-to-right {
+    100% {
+        transform: translateX(0);
+    }
 }
