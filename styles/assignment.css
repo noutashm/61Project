@@ -1,3 +1,15 @@
 .row>* {
     padding: 0;
 }
+
+
+/* Part 1 Animation Start */
+
+.two-piha,
+.three-piha {
+    display: none;
+}
+
+@keyframes bottom-to-top {
+    transform: translateY(100%);
+}
