@@ -2,6 +2,9 @@
     padding: 0;
 }
 
+
+/* Navbar */
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -11,8 +14,6 @@ ul {
 }
 
 li {
-    display: flex;
-    align-items: center;
     float: left;
 }
 
