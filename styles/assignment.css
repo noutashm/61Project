@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
 .row>* {
     padding: 0;
 }
@@ -15,6 +20,16 @@
 
 
 /* Part 1 */
+
+.container-fluid,
+.part-one {
+    overflow: hidden;
+    /* TODO: fix overflow of animation 1 */
+}
+
+.one-piha {
+    animation: fade-away 2.5s 1s forwards;
+}
 
 .two-piha {
     transform: translateY(100%);
@@ -34,6 +49,22 @@
     right: 0;
 }
 
+#piha {
+    font-size: 50px;
+    font-family: Lobster;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 0;
+}
+
+#beauty {}
+
+#wild {}
+
+#name-one {}
+
 @keyframes bottom-to-top {
     100% {
         transform: translateY(0);
@@ -44,6 +75,17 @@
     100% {
         transform: translateX(0);
     }
+}
+
+@keyframes fade-away {
+    100% {
+        opacity: 0;
+    }
+}
+
+.part-one a {
+    text-decoration: none;
+    color: black;
 }
 
 .part-one,
