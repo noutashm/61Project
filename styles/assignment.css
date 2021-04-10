@@ -35,6 +35,10 @@ a {
 
 /* Part 1 */
 
+.part-one {
+  position: relative;
+}
+
 .one-piha {
   animation: fade-out 4s 1.5s;
 }
@@ -46,7 +50,7 @@ a {
 
 .three-piha {
   transform: translateX(100%);
-  animation: bottom-to-top 4s 5s forwards;
+  animation: left-to-right 4s 5s forwards;
 }
 
 .two-piha,
@@ -56,10 +60,35 @@ a {
   left: 0;
 }
 
+#first-text-one:before {
+  content: 'Piha';
+  font-family: Lobster;
+  color: white;
+  font-size: 7vh;
+  position: absolute;
+  top: 33%;
+  left: 10%;
+  animation: one-text-first 7s 1.5s forwards;
+}
+
+#second-text-one {
+  position: absolute;
+  top: 45%;
+  right: 1%;
+  background-color: lightgreen;
+  padding: 1vh;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  opacity: .9;
+  transform: translateX(200%);
+  animation: left-to-right 4s 5s alternate infinite forwards;
+}
+
 #first-name {
   position: absolute;
   font-size: 2vh;
-  top: 25%;
+  top: 80%;
   right: 1%;
   font-weight: bold;
   color: white;
@@ -67,26 +96,15 @@ a {
   animation: fade-in 2s 9s forwards;
 }
 
-#first-text-one:before {
-  content: 'Piha';
-  font-family: Lobster;
-  color: white;
-  font-size: 8vh;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  animation: one-text-first 8s 1.5s 3 alternate forwards;
-}
-
 @keyframes one-text-first {
-  0% {font-size: 8vh;}
+  0% {font-size: 7vh;}
   25%, 75% {
     font-size: 0vh;
     transform: rotate(360deg);
   }
 
   50%, 100% {
-    font-size: 8vh; 
+    font-size: 7vh; 
     transform: rotate(-360deg); 
   }
 
