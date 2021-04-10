@@ -11,7 +11,8 @@
 
 .nav-item {
   transition: 0.3s;
-  padding: 0 5vw;
+  padding: 0 4vw;
+  font-weight: bold;
 }
 
 .nav-item:hover {
@@ -90,8 +91,17 @@
 
 .part-two,
 .part-three {
-  z-index: 10;
+  z-index: 1;
   background-color: white;
 }
 
-/* Nav Pills */
+/* Part 3 */
+.progress {
+  font-size: 17px;
+  height: 30px;
+  margin: 20px 5px;
+}
+
+.progress-bar {
+  color: #4C4C43;
+}
