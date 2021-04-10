@@ -1,95 +1,97 @@
 @font-face {
-    font-family: Lobster;
-    src: url(../fonts/Lobster-Regular.ttf);
+  font-family: Lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
 }
 
-.row>* {
-    padding: 0;
+.row > * {
+  padding: 0;
 }
-
 
 /* Navbar */
 
 .nav-item {
-    transition: 0.3s;
+  transition: 0.3s;
+  padding: 0 5vw;
 }
 
 .nav-item:hover {
-    background-color: lightyellow;
+  background-color: lightyellow;
 }
-
 
 /* Part 1 */
 
-.container-fluid,
-.part-one {
-    overflow: hidden;
-    /* TODO: fix overflow of animation 1 */
-}
-
 .one-piha {
-    animation: fade-away 2.5s 1s forwards;
+  animation: fade-away 2.5s 1s;
 }
 
 .two-piha {
-    transform: translateY(100%);
-    animation: bottom-to-top 2.5s 1s forwards;
+  transform: translateY(100%);
+  animation: bottom-to-top 2.5s 1s forwards;
 }
 
 .three-piha {
-    transform: translateX(100%);
-    animation: bottom-to-top 4s 4s forwards;
+  transform: translateX(100%);
+  animation: bottom-to-top 4s 4s forwards;
 }
 
 .two-piha,
 .three-piha {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #piha {
-    font-size: 50px;
-    font-family: Lobster;
-    color: white;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    right: 0;
+  font-size: 50px;
+  font-family: Lobster;
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
-#beauty {}
+#beauty {
+}
 
-#wild {}
+#wild {
+}
 
-#name-one {}
+#name-one {
+}
 
 @keyframes bottom-to-top {
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes left-to-right {
-    100% {
-        transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes fade-away {
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 .part-one a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .part-one,
 .part-two,
 .part-three {
-    overflow: hidden;
+  overflow: hidden;
 }
+
+.part-two,
+.part-three {
+  z-index: 10;
+  background-color: white;
+}
+
+/* Nav Pills */
