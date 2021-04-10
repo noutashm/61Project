@@ -12,24 +12,37 @@
 // tab.show()
 
 var tabList = document.querySelectorAll('.nav-tabs button')
+//console.log(tabList)
 
-tabList.forEach(function (list, index) {
-    //console.log(list)
-    if (list.className == 'nav-link active') {
-        console.log(index)
-        let nextItem = list.nextElementSibling
-        let previousItem = list.previousElementSibling
-        //console.log(nextItem)
+var tabList1 = [].slice.call(document.querySelectorAll('.nav-tabs button'))
+//console.log(tabList1)
+
+for (var i = 0; i < tabList.length; i++) {
+    if (tabList[i].className == 'nav-link active') {
+        i++
+        nextItem = tabList[i]
         document.querySelector('.next').onclick = function () {
-            while (index > -1) {
-                nextItem.click()
-                index++
-            }
-        }
-        if (previousItem !== null) {
-            document.querySelector('.previous').onclick = function () {
-                previousItem.click()
-            }
+            nextItem.click()
+            i++
+            console.log(tabList[i])
         }
     }
-})
+}
+
+// tabList.forEach(function (list, index) {
+//     //console.log(list)
+//     if (list.className == 'nav-link active') {
+//         let nextItem = list.nextElementSibling
+//         let previousItem = list.previousElementSibling
+//         document.querySelector('.next').onclick = function () {
+//             nextItem.click()
+
+//             console.log()
+//         }
+//         if (previousItem !== null) {
+//             document.querySelector('.previous').onclick = function () {
+//                 previousItem.click()
+//             }
+//         }
+//     }
+// })
