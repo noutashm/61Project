@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.btn {
+  color: #4C4C43;
+}
+
 /* Navbar */
 
 .nav-item {
@@ -96,10 +100,19 @@
 }
 
 /* Part 3 */
+
+.part-three {
+  padding: 3vh 5vw;
+}
+
+.nav-tabs {
+  /* display: none; */
+}
+
 .progress {
   font-size: 17px;
   height: 30px;
-  margin: 20px 5px;
+  margin: 10px 0;
 }
 
 .progress-bar {
