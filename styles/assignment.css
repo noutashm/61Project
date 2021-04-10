@@ -26,17 +26,19 @@
 /* Part 1 */
 
 .one-piha {
-  animation: fade-away 2.5s 1s;
+  /* animation: fade-away 3s 1.5s; */
+  opacity: 0;
+  transition: 3s 1.5s;
 }
 
 .two-piha {
   transform: translateY(100%);
-  animation: bottom-to-top 2.5s 1s forwards;
+  animation: bottom-to-top 3s 1.5s forwards;
 }
 
 .three-piha {
   transform: translateX(100%);
-  animation: bottom-to-top 4s 4s forwards;
+  animation: bottom-to-top 4s 4.5s forwards;
 }
 
 .two-piha,
@@ -73,12 +75,6 @@
 @keyframes left-to-right {
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes fade-away {
-  100% {
-    opacity: 0;
   }
 }
 
