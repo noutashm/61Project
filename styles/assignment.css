@@ -28,17 +28,17 @@
 .one-piha {
   /* animation: fade-away 3s 1.5s; */
   opacity: 0;
-  transition: 3s 1.5s;
+  transition: 4s 1.5s;
 }
 
 .two-piha {
   transform: translateY(100%);
-  animation: bottom-to-top 3s 1.5s forwards;
+  animation: bottom-to-top 4s 1.5s forwards;
 }
 
 .three-piha {
   transform: translateX(100%);
-  animation: bottom-to-top 4s 4.5s forwards;
+  animation: bottom-to-top 4s 5s forwards;
 }
 
 .two-piha,
@@ -48,45 +48,46 @@
   left: 0;
 }
 
-#piha {
-  font-size: 50px;
+#one-text:before {
+  content: 'Piha';
   font-family: Lobster;
   color: white;
+  font-size: 50px;
   position: absolute;
   top: 10%;
   left: 10%;
+  animation: one-text-first 3s 1.5s forwards;
 }
 
-#beauty {
+@keyframes one-text-first {
+  0% {font-size: 50px;}
+  40% {
+    font-size: 0px;
+    transform: rotate(360deg);
+  }
+  100% {
+    font-size: 50px; 
+    transform: rotate(-360deg); 
+    content: 'Wild'; 
+    color: lightblue;
+  }
 }
 
-#wild {
+@keyframes one-test-second {
+  0% {}
+  100% {}
 }
 
-#name-one {
+@keyframes fade-away {
+  100% { opacity: 0; }
 }
 
 @keyframes bottom-to-top {
-  100% {
-    transform: translateY(0);
-  }
+  100% { transform: translateY(0); }
 }
 
 @keyframes left-to-right {
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.part-one a {
-  text-decoration: none;
-  color: black;
-}
-
-.part-one,
-.part-two,
-.part-three {
-  overflow: hidden;
+  100% { transform: translateX(0); }
 }
 
 .part-two,
