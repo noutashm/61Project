@@ -45,7 +45,8 @@
     <div class="row">
       <div class="col part-three">
         <div class="progress">
-          <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:25%">25%</div>
+          <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" id="progress-bar"
+            style="width:25%">25%</div>
         </div>
         <nav>
           <div class="nav nav-tabs" id="nav-tab">
@@ -62,21 +63,21 @@
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="page-1">
             Page 1<br />
-            <button class="btn btn-warning next">Next</button>
+            <button class="btn btn-warning next" id="page-1-next">Next</button>
           </div>
           <div class="tab-pane fade" id="page-2">
             Page 2<br />
-            <button class="btn btn-warning previous">Previous</button>
-            <button class="btn btn-warning next">Next</button>
+            <button class="btn btn-warning previous" id="page-2-previous">Previous</button>
+            <button class="btn btn-warning next" id="page-2-next">Next</button>
           </div>
           <div class="tab-pane fade" id="page-3">
             Page 3<br />
-            <button class="btn btn-warning previous">Previous</button>
-            <button class="btn btn-warning next">Next</button>
+            <button class="btn btn-warning previous" id="page-3-previous">Previous</button>
+            <button class="btn btn-warning next" id="page-3-next">Next</button>
           </div>
           <div class="tab-pane fade" id="page-4">
             Page 4<br />
-            <button class="btn btn-warning previous">Previous</button>
+            <button class="btn btn-warning previous" id="page-4-previous">Previous</button>
             <input class="btn btn-warning" type="submit" value="Submit">
           </div>
         </div>
