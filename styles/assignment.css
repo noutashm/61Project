@@ -11,6 +11,16 @@
   color: #4C4C43;
 }
 
+a {
+  text-decoration: none;
+}
+
+.part-two,
+.part-three {
+  z-index: 1;
+  background-color: white;
+} 
+
 /* Navbar */
 
 .nav-item {
@@ -26,9 +36,7 @@
 /* Part 1 */
 
 .one-piha {
-  /* animation: fade-away 3s 1.5s; */
-  opacity: 0;
-  transition: 4s 1.5s;
+  animation: fade-out 4s 1.5s;
 }
 
 .two-piha {
@@ -48,38 +56,62 @@
   left: 0;
 }
 
-#one-text:before {
+#first-name {
+  position: absolute;
+  font-size: 2vh;
+  top: 25%;
+  right: 1%;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  animation: fade-in 2s 9s forwards;
+}
+
+#first-text-one:before {
   content: 'Piha';
   font-family: Lobster;
   color: white;
-  font-size: 50px;
+  font-size: 8vh;
   position: absolute;
   top: 10%;
   left: 10%;
-  animation: one-text-first 3s 1.5s forwards;
+  animation: one-text-first 8s 1.5s 3 alternate forwards;
 }
 
 @keyframes one-text-first {
-  0% {font-size: 50px;}
-  40% {
-    font-size: 0px;
+  0% {font-size: 8vh;}
+  25%, 75% {
+    font-size: 0vh;
     transform: rotate(360deg);
   }
-  100% {
-    font-size: 50px; 
+
+  50%, 100% {
+    font-size: 8vh; 
     transform: rotate(-360deg); 
+  }
+
+  50% {
+    color: lightskyblue;
     content: 'Wild'; 
-    color: lightblue;
+  }
+  100% {
+    color: lightgreen;
+    content: 'Scenic'; 
   }
 }
 
-@keyframes one-test-second {
-  0% {}
-  100% {}
+@keyframes fade-out {
+  100% { opacity: 0; }
 }
 
-@keyframes fade-away {
-  100% { opacity: 0; }
+@keyframes fade-in {
+  0% {
+    transform: scale(0);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes bottom-to-top {
@@ -90,11 +122,7 @@
   100% { transform: translateX(0); }
 }
 
-.part-two,
-.part-three {
-  z-index: 1;
-  background-color: white;
-}
+/* Part 2 */
 
 /* Part 3 */
 
