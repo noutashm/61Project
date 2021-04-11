@@ -49,26 +49,12 @@
           <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" id="progress-bar"
             style="width:25%">25%</div>
         </div>
-        <nav>
-          <div class="nav nav-tabs" id="nav-tab">
-            <button class="nav-link active" id="page-1-tab" data-bs-toggle="tab" data-bs-target="#page-1"
-              type="button">Page 1</button>
-            <button class="nav-link" id="page-2-tab" data-bs-toggle="tab" data-bs-target="#page-2" type="button">Page
-              2</button>
-            <button class="nav-link" id="page-3-tab" data-bs-toggle="tab" data-bs-target="#page-3" type="button">Page
-              3</button>
-            <button class="nav-link" id="page-4-tab" data-bs-toggle="tab" data-bs-target="#page-4" type="button">Page
-              4</button>
-          </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="page-1">
+        <div id="tab-content">
+          <div id="page-1">
             <input type="date" name="" id="">
             <input type="radio" name="" id="">
-            <br />
-            <button class="btn btn-warning next" id="page-1-next">Next</button>
           </div>
-          <div class="tab-pane fade" id="page-2">
+          <div id="page-2">
             <input type="range" name="" id="">
             <select name="" id="">
               <option value=""></option>
@@ -76,26 +62,20 @@
               <option value=""></option>
               <option value=""></option>
             </select>
-            <br />
-            <button class="btn btn-warning previous" id="page-2-previous">Previous</button>
-            <button class="btn btn-warning next" id="page-2-next">Next</button>
           </div>
-          <div class="tab-pane fade" id="page-3">
+          <div id="page-3">
             <input type="color" name="" id="">
             <input type="number" name="" id="">
-            <br />
-            <button class="btn btn-warning previous" id="page-3-previous">Previous</button>
-            <button class="btn btn-warning next" id="page-3-next">Next</button>
           </div>
-          <div class="tab-pane fade" id="page-4">
+          <div id="page-4">
             <input type="email" name="" id="">
             <input type="checkbox" name="" id="">
-            <br />
-            <button class="btn btn-warning previous" id="page-4-previous">Previous</button>
-            <input class="btn btn-warning" type="submit" value="Submit">
           </div>
         </div>
-        <div id="js"></div>
+        <div id="buttons-container">
+          <button class="btn btn-warning" id="previous">Previous</button>
+          <button class="btn btn-warning" id="next">Next</button>
+        </div>
       </div>
       <div class="col-3 part-two">
         <img src="images/Part 2/1-Mitre.jpg" class="img-fluid" />
@@ -106,8 +86,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
-  <!-- Jquery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Local JS -->
   <script src="scripts/assignment.js"></script>
 </body>

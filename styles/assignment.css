@@ -80,15 +80,14 @@ a {
   font-weight: bold;
   border-radius: 5px;
   color: #4C4C43;
-
   transform: translateX(150%);
   animation: left-to-right 3s 7s alternate infinite;
 }
 
 #a-name {
   position: absolute;
-  font-size: 2vh;
-  top: 80%;
+  font-size: 1.7vh;
+  bottom: 1%;
   right: 1%;
   font-weight: bold;
   color: #FFC107;
@@ -150,7 +149,7 @@ a {
   padding: 3vh 5vw;
 }
 
-.nav-tabs {
+.hidden {
   display: none;
 }
 
