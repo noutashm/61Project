@@ -15,11 +15,19 @@ a {
   text-decoration: none;
 }
 
+.part-one, .part-two {
+  position: relative;
+}
+
 .part-two,
 .part-three {
   z-index: 1;
   background-color: white;
-} 
+}
+
+.part-one, .part-two, .part-three {
+  overflow: hidden;
+}
 
 /* Navbar */
 
@@ -34,10 +42,6 @@ a {
 }
 
 /* Part 1 */
-
-.part-one {
-  position: relative;
-}
 
 .one-piha {
   animation: fade-out 4s 1.5s;
@@ -86,8 +90,8 @@ a {
 
 #a-name {
   position: absolute;
-  font-size: 1.7vh;
-  bottom: 1%;
+  font-size: 2vh;
+  bottom: 4%;
   right: 1%;
   font-weight: bold;
   color: #FFC107;
@@ -140,8 +144,20 @@ a {
 }
 
 /* Part 2 */
+.one-ii {
+  position: relative;
+  scale: 1.1;
+}
 
+.two-ii {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
 
+@keyframes zoom-out {
+  
+}
 
 /* Part 3 */
 
