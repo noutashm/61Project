@@ -1,4 +1,4 @@
-var allPages = document.querySelectorAll('#tab-content div[id^="page-"]')
+var allPages = document.querySelectorAll('.tab-content div[id^="page-"]')
 var nextBtn = document.getElementById('next')
 var previousBtn = document.getElementById('previous')
 var submitBtn = document.getElementById('submit')

@@ -96,7 +96,7 @@ a {
   font-weight: bold;
   color: #FFC107;
   opacity: 0;
-  animation: fade-in 2s 9s forwards;
+  animation: fade-scale-in 2s 9s forwards;
 }
 
 @keyframes text-piha {
@@ -125,7 +125,7 @@ a {
   100% { opacity: 0; }
 }
 
-@keyframes fade-in {
+@keyframes fade-scale-in {
   0% {
     transform: scale(0);
   }
@@ -145,7 +145,7 @@ a {
 
 /* Part 2 */
 .one-ii {
-  transform: scale(1.1);
+  transform: scale(1.2);
   animation: zoom-out 3s 1.5s forwards;
 }
 
@@ -153,16 +153,25 @@ a {
   position: absolute;
   left: 0;
   opacity: 0;
+  transform: scale(2.2) translateX(25%);
+  animation: fade-in 1s 4s forwards, move-to-left 3s 5s forwards;
 }
 
 @keyframes zoom-out {
   100% { transform: scale(1); }
 }
 
-/* Part 3 */
+@keyframes fade-in {
+  100% { opacity: 1; }
+}
 
+@keyframes move-to-left {
+  100% { transform: scale(2.2) translateX(9%); }
+}
+
+/* Part 3 */
 .part-three {
-  padding: 3vh 5vw;
+  padding: 4vh 5vw;
 }
 
 .hidden {
@@ -177,4 +186,8 @@ a {
 
 .progress-bar {
   color: #4C4C43;
+}
+
+.tab-content {
+  margin: 5vh 0;
 }
