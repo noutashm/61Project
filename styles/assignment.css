@@ -82,7 +82,7 @@ a {
   color: white;
 
   transform: translateX(150%);
-  animation: left-to-right 3s 6s alternate infinite forwards;
+  animation: left-to-right 3s 6s alternate infinite;
 }
 
 #a-name {
