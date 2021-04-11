@@ -60,43 +60,43 @@ a {
   left: 0;
 }
 
-#first-text-one:before {
+#a-first-text:before {
   content: 'Piha';
   font-family: Lobster;
-  color: white;
+  color: #281310;
   font-size: 7vh;
   position: absolute;
   top: 33%;
   left: 10%;
-  animation: one-text-first 7s 1.5s forwards;
+  animation: text-piha 7s 1.5s forwards;
 }
 
-#second-text-one {
+#a-second-text {
   position: absolute;
   top: 45%;
   right: 1%;
-  background-color: lightgreen;
+  background-color: #8FEB75;
   padding: 1vh;
   font-weight: bold;
   border-radius: 5px;
   color: white;
-  opacity: .9;
-  transform: translateX(200%);
-  animation: left-to-right 4s 5s alternate infinite forwards;
+
+  transform: translateX(150%);
+  animation: left-to-right 3s 6s alternate infinite forwards;
 }
 
-#first-name {
+#a-name {
   position: absolute;
   font-size: 2vh;
   top: 80%;
   right: 1%;
   font-weight: bold;
-  color: white;
+  color: #8FEB75;
   opacity: 0;
   animation: fade-in 2s 9s forwards;
 }
 
-@keyframes one-text-first {
+@keyframes text-piha {
   0% {font-size: 7vh;}
   25%, 75% {
     font-size: 0vh;
@@ -109,11 +109,11 @@ a {
   }
 
   50% {
-    color: lightskyblue;
+    color: #e5c58c;
     content: 'Wild'; 
   }
   100% {
-    color: lightgreen;
+    color: #8FEB75;
     content: 'Scenic'; 
   }
 }
