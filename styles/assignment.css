@@ -157,6 +157,16 @@ a {
   animation: fade-in 1s 4s forwards, move-to-left 3s 5s forwards;
 }
 
+#b-first-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 @keyframes zoom-out {
   100% { transform: scale(1); }
 }
