@@ -1,3 +1,17 @@
+// Part 2 Animation
+function typingEffect(txt) {
+    var i = 0;
+    if (i < txt.length) {
+        document.getElementById("b-first-text").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typingEffect(txt), 50)
+    }
+}
+
+typingEffect("ahhhhh")
+
+
+// Part 3
 var allPages = document.querySelectorAll('.tab-content div[id^="page-"]')
 var nextBtn = document.getElementById('next')
 var previousBtn = document.getElementById('previous')
@@ -97,15 +111,3 @@ function conditions() {
             break;
     }
 }
-
-// Part 2 Animation
-function typingEffect(txt) {
-    var i = 0;
-    if (i < txt.length) {
-        document.getElementById("b-first-text").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typingEffect(), 50)
-    }
-}
-
-typingEffect("Jason is a Bitch")
