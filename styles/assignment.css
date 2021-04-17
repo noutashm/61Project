@@ -191,8 +191,8 @@ a {
 
 .progress {
   font-size: 17px;
-  height: 5vh;
-  margin: 4vh 0;
+  height: 4vh;
+  margin: 1vh 0;
 }
 
 .progress-bar {
@@ -206,5 +206,5 @@ a {
 #form-btns {
   position: absolute;
   bottom: 5vh;
-  left: 10vh;
+  right: 10vh;
 }

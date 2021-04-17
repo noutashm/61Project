@@ -120,7 +120,6 @@ function conditions() {
 }
 
 // Clear form on refresh
-
 function clearFormInputs() {
     date.value = ''
     cookingTrue.checked = false
