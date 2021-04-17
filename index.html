@@ -51,37 +51,35 @@
         <div class="tab-content">
           <div id="page-1">
             <label class="form-label" for="date">When do you plan to stay?</label>
-            <input class="form-control" type="date" name="date" id="date"><br />
+            <input class="form-control" type="date" name="date" id="date"><br>
             <label class="form-label" for="">Do you need cooking facilities?</label><br>
-            <input class="form-check-input" type="radio" name="cooking-yes" id="cooking-yes">
-            <label class="form-check-label" for="cooking-yes">Yes</label>
-            <input class="form-check-input" type="radio" name="cooking-no" id="cooking-no">
-            <label class="form-check-label" for="cooking-no">No</label>
+            <input class="form-check-input" type="radio" name="cooking" id="cooking-yes"> Yes
+            <input class="form-check-input" type="radio" name="cooking" id="cooking-no"> No
           </div>
           <div id="page-2">
-            <input type="range" name="" id=""><br />
-            <select name="equipment" id="equipment">
-              <option disabled selected>Choose an Equipment</option>
+            <label for="range" class="form-label">Range</label>
+            <input type="range" class="form-range" id="range"><br />
+            <select class="form-select" name="equipment" id="equipment">
+              <option selected disabled>Choose an Equipment</option>
               <option value="goggles">Swimming Goggles</option>
               <option value="">Surfboard</option>
-              <option value=""></option>
-              <option value=""></option>
             </select>
           </div>
           <div id="page-3">
-            <input type="color" name="" id=""><br />
-            <input type="number" name="" id="">
+            <label for="color" class="form-label">Color picker</label>
+            <input type="color" class="form-control form-control-color" id="color" title="Choose your color"><br />
+            <input class="form-control" type="number" min="0" max="10" name="" id="">
           </div>
           <div id="page-4">
             <label for="email" class="form-label">Email: </label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"><br />
-            <input class="form-check-input" type="checkbox" value="" id="agreement">
+            <input type="email" class="form-control" id="email"><br />
+            <input class="form-check-input" type="checkbox" id="agreement">
             <label class="form-check-label" for="agreement">
               I agree with local native conservative initiative agreement.
             </label>
           </div>
         </div>
-        <div id=" buttons-container">
+        <div id="form-btns">
           <button class="btn btn-warning" id="previous">Previous</button>
           <button class="btn btn-warning" id="next">Next</button>
           <button class="btn btn-warning" id="submit">Submit</button>

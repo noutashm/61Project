@@ -181,6 +181,7 @@ a {
 
 /* Part 3 */
 .part-three {
+  position: relative;
   padding: 4vh 5vw;
 }
 
@@ -190,8 +191,8 @@ a {
 
 .progress {
   font-size: 17px;
-  height: 30px;
-  margin: 10px 0;
+  height: 5vh;
+  margin: 4vh 0;
 }
 
 .progress-bar {
@@ -200,4 +201,10 @@ a {
 
 .tab-content {
   margin: 5vh 0;
+}
+
+#form-btns {
+  position: absolute;
+  bottom: 5vh;
+  left: 10vh;
 }

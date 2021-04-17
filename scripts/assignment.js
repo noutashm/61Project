@@ -18,6 +18,13 @@ var previousBtn = document.getElementById('previous')
 var submitBtn = document.getElementById('submit')
 var progressBar = document.getElementById('progress-bar')
 
+var date = document.getElementById('date')
+var cookingTrue = document.getElementById('cooking-yes')
+var cookingFalse = document.getElementById('cooking-no')
+var equipment = document.getElementById('equipment')
+var email = document.getElementById('email')
+var agreement = document.getElementById('agreement')
+
 var totalPages = allPages.length
 var currentPageIndex = 0
 
@@ -114,6 +121,13 @@ function conditions() {
 
 // Clear form on refresh
 
-window.onload() = {
-
+function clearFormInputs() {
+    date.value = ''
+    cookingTrue.checked = false
+    cookingFalse.checked = false
+    agreement.checked = false
+    email.value = ''
+    equipment.selectedIndex = 0
 }
+
+window.onload = clearFormInputs();
