@@ -50,14 +50,20 @@
         </div>
         <div class="tab-content">
           <div id="page-1">
-            <input type="date" name="" id=""><br />
-            <input type="radio" name="" id="">
+            <label class="form-label" for="date">When do you plan to stay?</label>
+            <input class="form-control" type="date" name="date" id="date"><br />
+            <label class="form-label" for="">Do you need cooking facilities?</label><br>
+            <input class="form-check-input" type="radio" name="cooking-yes" id="cooking-yes">
+            <label class="form-check-label" for="cooking-yes">Yes</label>
+            <input class="form-check-input" type="radio" name="cooking-no" id="cooking-no">
+            <label class="form-check-label" for="cooking-no">No</label>
           </div>
           <div id="page-2">
             <input type="range" name="" id=""><br />
-            <select name="" id="">
-              <option value=""></option>
-              <option value=""></option>
+            <select name="equipment" id="equipment">
+              <option disabled selected>Choose an Equipment</option>
+              <option value="goggles">Swimming Goggles</option>
+              <option value="">Surfboard</option>
               <option value=""></option>
               <option value=""></option>
             </select>
@@ -67,8 +73,12 @@
             <input type="number" name="" id="">
           </div>
           <div id="page-4">
-            <input type="email" name="" id=""><br />
-            <input type="checkbox" name="" id="">
+            <label for="email" class="form-label">Email: </label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"><br />
+            <input class="form-check-input" type="checkbox" value="" id="agreement">
+            <label class="form-check-label" for="agreement">
+              I agree with local native conservative initiative agreement.
+            </label>
           </div>
         </div>
         <div id=" buttons-container">

@@ -4,11 +4,11 @@ function typingEffect(txt) {
     if (i < txt.length) {
         document.getElementById("b-first-text").innerHTML += txt.charAt(i);
         i++;
-        setTimeout(typingEffect(txt), 50)
+        setTimeout(typingEffect(txt.length), 50) // TODO:
     }
 }
 
-typingEffect("ahhhhh")
+typingEffect("Artistic")
 
 
 // Part 3
@@ -110,4 +110,10 @@ function conditions() {
             progressBar.innerHTML = '100%'
             break;
     }
+}
+
+// Clear form on refresh
+
+window.onload() = {
+
 }
