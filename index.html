@@ -36,7 +36,7 @@
             <a class="nav-link" href="docs/Part 2 - StoryBoard.pdf" target="_blank">Part 2 StoryBoard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">Part 3 Wireframe</a>
+            <a class="nav-link" href="docs/Part 3 - Wireframes.pdf" target="_blank">Part 3 Wireframe</a>
           </li>
         </ul>
       </nav>
@@ -65,36 +65,41 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Start Date: </span>
               </div>
-              <input type="date" class="form-control" id="start-date" name="start-date">
-              <div class="input-group-prepend">
-                <span class="input-group-text">End Date: </span>
-              </div>
-              <input type="date" class="form-control" id="end-date" name="end-date">
+              <input type="date" class="form-control" id="date" name="date">
             </div>
             <label class="form-label" for="">Do you need cooking facilities?</label><br>
             <input class="form-check-input" type="radio" name="cooking" id="cooking-yes"> Yes <br>
-            <input class="form-check-input" type="radio" name="cooking" id="cooking-no"> No
+            <input class="form-check-input" type="radio" name="cooking" id="cooking-no" checked> No
           </div>
           <div id="page-2">
             <h3>Step 2</h3>
             <label for="range" class="form-label">Number of People (1-10)</label>
-            <input type="range" min="0" max="10" class="form-range" id="range"><br />
+            <input type="range" min="0" max="10" class="form-range" id="people-number" value="1"><br />
+            <label class="form-label" for="equipment">Choose if any equipment required:</label>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text">Equipment :</span>
               </div>
               <select class="form-select" id="equipment" name="equipment">
-                <option selected value="">No Equipment</option>
-                <option value="goggles">Swimming Goggles</option>
-                <option value="surfboard">Surfboard</option>
+                <option selected value="None">No Equipment</option>
+                <option value="Swimming-Goggles">Swimming Goggles</option>
+                <option value="Surfboard">Surfboard</option>
               </select>
             </div>
           </div>
           <div id="page-3">
             <h3>Step 3</h3>
-            <label for="color" class="form-label">Flower Color:</label>
-            <input type="color" class="form-control form-control-color" id="color"><br />
-            <input class="form-control" type="number" min="0" max="10" name="" id="">
+            <label for="color" class="form-label">We Provide a flower as a welcome gift, please choose preferable
+              color:</label>
+            <input type="color" class="form-control form-control-color" id="color" value="#87CEFA"><br>
+            <label class="form-label" for="number">How Long will you be staying?</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Days: </span>
+              </div>
+              <input class="form-control" type="number" min="0" max="30" id="days-number" placeholder="Number of Days">
+            </div>
+
           </div>
           <div id="page-4">
             <h3>Step 4</h3>
@@ -108,6 +113,9 @@
             <label class="form-check-label" for="agreement">
               I agree with local native conservative initiative agreement.
             </label>
+
+            <h4 style="margin-top: 4vh;">Summary</h4>
+            <div id="summary"></div>
           </div>
         </div>
         <div id="form-btns">

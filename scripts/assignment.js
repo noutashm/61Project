@@ -2,6 +2,7 @@
 var bSecondTxt = document.getElementById('b-second-txt')
 
 var i = 0;
+
 setTimeout(function () { typingEffect('ARTISTIC \n ODESSEY? \n VINEYARD \n VOYAGE?', bSecondTxt) }, 1500)
 
 function typingEffect(txt, place) {
@@ -19,13 +20,22 @@ var previousBtn = document.getElementById('previous')
 var submitBtn = document.getElementById('submit')
 var progressBar = document.getElementById('progress-bar')
 
+var firstName = document.getElementById('firstname')
+var lastName = document.getElementById('lastname')
 var date = document.getElementById('date')
 var cookingTrue = document.getElementById('cooking-yes')
 var cookingFalse = document.getElementById('cooking-no')
+var peopleNumber = document.getElementById('people-number')
 var equipment = document.getElementById('equipment')
+var color = document.getElementById('color')
+var numOfDays = document.getElementById('days-number')
 var email = document.getElementById('email')
 var agreement = document.getElementById('agreement')
 
+var submitBtn = document.getElementById('submit')
+var summaryLocation = document.getElementById('summary')
+
+// 4 Pages Setup
 var totalPages = allPages.length
 var currentPageIndex = 0
 
@@ -120,14 +130,48 @@ function conditions() {
     }
 }
 
+//Data Handling
+
+submitBtn.onclick = function () {
+    var cookingBooked = ''
+    if (cookingTrue.checked == true) {
+        cookingBooked = 'Yes'
+    } else {
+        cookingBooked = 'No'
+    }
+
+    agree = ''
+    if (agreement.checked == true) {
+        agree = 'Yes'
+    } else {
+        agree = 'No'
+    }
+
+    summaryLocation.innerHTML =
+        'Name : ' + firstName.value + ' ' + lastName.value +
+        '<br>Email : ' + email.value +
+        '<br>Booking Date : ' + date.value +
+        '<br>Stay Duration : ' + numOfDays.value + ' Days' +
+        '<br>Number of People : ' + peopleNumber.value +
+        '<br>Equipment Booked : ' + equipment.value +
+        '<br>Cooking Facilities Booked : ' + cookingBooked +
+        '<br>Prefered Flower Color : ' + '<input type="color" value="' + color.value + '">' +
+        '<br>Do you agree with local native conservative initiative agreement : ' + agree
+}
+
 // Clear form on refresh
 function clearFormInputs() {
-    //date.value = ''
+    firstName.value = ''
+    lastName.value = ''
+    date.value = ''
     cookingTrue.checked = false
-    cookingFalse.checked = false
-    agreement.checked = false
-    email.value = ''
+    cookingFalse.checked = true
+    peopleNumber.value = '1'
     equipment.selectedIndex = 0
+    numOfDays.value = ''
+    email.value = ''
+    agreement.checked = false
+    summaryLocation.value = ''
 }
 
 window.onload = clearFormInputs();
