@@ -3,6 +3,21 @@
   src: url(../fonts/BeautyMountains.ttf);
 }
 
+@font-face {
+  font-family: SchiffenFontDuo;
+  src: url(../fonts/SchiffenFontDuo.ttf);
+}
+
+@font-face {
+  font-family: MrB;
+  src: url(../fonts/MrB.ttf);
+}
+
+@font-face {
+  font-family: EvanstonTavern;
+  src: url(../fonts/EvanstonTavern-1826Light.ttf);
+}
+
 .row > * {
   padding: 0;
 }
@@ -68,7 +83,7 @@ a {
   content: 'Piha';
   font-family: BeautyMountains;
   color: #281310;
-  font-size: 8vh;
+  font-size: 10vh;
   position: absolute;
   top: 33%;
   left: 10%;
@@ -100,14 +115,14 @@ a {
 }
 
 @keyframes text-piha {
-  0% {font-size: 8vh;}
+  0% {font-size: 10vh;}
   25%, 75% {
     font-size: 0vh;
     transform: rotate(360deg);
   }
 
   50%, 100% {
-    font-size: 8vh; 
+    font-size: 10vh; 
     transform: rotate(-360deg); 
   }
 
@@ -154,17 +169,72 @@ a {
   left: 0;
   opacity: 0;
   transform: scale(2.2) translateX(25%);
-  animation: fade-in 1s 4s forwards, move-to-left 3s 5s forwards;
+  animation: fade-in 1s 4s forwards, move-to-left 4s 5s forwards;
 }
 
-#b-first-text {
-  position: absolute;
+#b-first-txt {
   top: 10%;
+  font-size: 50px;
+  transform: skewX(20deg);
+}
+
+#b-second-txt {
+  top: 25%;
+  font-size: 40px;
+}
+
+#b-first-txt, #b-second-txt {
+  font-family: SchiffenFontDuo;
+  animation: fade-out 1s 4s forwards;
+}
+
+#b-first-txt, #b-second-txt, #b-third-txt {
+  position: absolute;
   left: 10%;
   z-index: 1;
   color: white;
-  font-size: 30px;
+}
+
+#b-third-txt {
+  top: 10%;
+  font-size: 70px;
+  line-height: 6vh;
+  font-family: MrB;
+  opacity: 0;
+  animation: fade-in 2s 5s forwards;
+}
+
+#b-btn {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  z-index: 1;
+  background-color: white;
+  color: rgb(0, 88, 204);
+  padding: 0 1vh 1vh 1vh;
+  border-radius: 5px;
+  font-family: EvanstonTavern;
+  font-size: 25px;
+  opacity: 0;
+  animation: fade-in 1s 7s forwards;
+}
+
+#b-name {
+  position: absolute;
+  font-size: 2vh;
+  bottom: 4%;
+  left: 10%;
   font-weight: bold;
+  color: white;
+  opacity: 0;
+  animation: fade-scale-in 2s 9s forwards;
+}
+
+#b-logo {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  width: 15%;
 }
 
 @keyframes zoom-out {
@@ -197,10 +267,6 @@ a {
 
 .progress-bar {
   color: #4C4C43;
-}
-
-.tab-content {
-  margin: 5vh 0;
 }
 
 #form-btns {

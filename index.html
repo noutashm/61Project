@@ -43,35 +43,67 @@
     </div>
     <div class="row">
       <div class="col part-three">
+        <h1 class="display-4">Book Your Trip</h1>
         <div class="progress">
           <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" id="progress-bar"
             style="width:25%">25%</div>
         </div>
         <div class="tab-content">
           <div id="page-1">
-            <label class="form-label" for="date">When do you plan to stay?</label>
-            <input class="form-control" type="date" name="date" id="date"><br>
+            <h3>Step 1</h3>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">First Name: </span>
+              </div>
+              <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Last Name: </span>
+              </div>
+              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Start Date: </span>
+              </div>
+              <input type="date" class="form-control" id="start-date" name="start-date">
+              <div class="input-group-prepend">
+                <span class="input-group-text">End Date: </span>
+              </div>
+              <input type="date" class="form-control" id="end-date" name="end-date">
+            </div>
             <label class="form-label" for="">Do you need cooking facilities?</label><br>
-            <input class="form-check-input" type="radio" name="cooking" id="cooking-yes"> Yes
+            <input class="form-check-input" type="radio" name="cooking" id="cooking-yes"> Yes <br>
             <input class="form-check-input" type="radio" name="cooking" id="cooking-no"> No
           </div>
           <div id="page-2">
-            <label for="range" class="form-label">Range</label>
-            <input type="range" class="form-range" id="range"><br />
-            <select class="form-select" name="equipment" id="equipment">
-              <option selected disabled>Choose an Equipment</option>
-              <option value="goggles">Swimming Goggles</option>
-              <option value="">Surfboard</option>
-            </select>
+            <h3>Step 2</h3>
+            <label for="range" class="form-label">Number of People (1-10)</label>
+            <input type="range" min="0" max="10" class="form-range" id="range"><br />
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Equipment :</span>
+              </div>
+              <select class="form-select" id="equipment" name="equipment">
+                <option selected value="">No Equipment</option>
+                <option value="goggles">Swimming Goggles</option>
+                <option value="surfboard">Surfboard</option>
+              </select>
+            </div>
           </div>
           <div id="page-3">
-            <label for="color" class="form-label">Color picker</label>
-            <input type="color" class="form-control form-control-color" id="color" title="Choose your color"><br />
+            <h3>Step 3</h3>
+            <label for="color" class="form-label">Flower Color:</label>
+            <input type="color" class="form-control form-control-color" id="color"><br />
             <input class="form-control" type="number" min="0" max="10" name="" id="">
           </div>
           <div id="page-4">
-            <label for="email" class="form-label">Email: </label>
-            <input type="email" class="form-control" id="email"><br />
+            <h3>Step 4</h3>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Email: </span>
+              </div>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
             <input class="form-check-input" type="checkbox" id="agreement">
             <label class="form-check-label" for="agreement">
               I agree with local native conservative initiative agreement.
@@ -87,7 +119,17 @@
       <div class="col-3 part-two">
         <img src="images/Part 2/1-InterIslander.jpg" class="img-fluid one-ii" />
         <img src="images/Part 2/2-InterIslander.jpg" class="img-fluid two-ii" />
-        <div id="b-first-text"></div>
+        <img src="images/Part 2/logo.png" class="img-fluid" id="b-logo">
+        <div id="b-first-txt">HOMEWARD BOUND?</div>
+        <pre id="b-second-txt"></pre>
+        <div id="b-third-txt">
+          <p>EVERY</p>
+          <p>JOURNEY</p>
+          <p>HAS A</p>
+          <p>STORY.</p>
+        </div>
+        <div id="b-btn">BOOK YOURS</div>
+        <div id="b-name">Mojeeb Noutash <br>&nbsp;&nbsp; ID: 1521102</div>
       </div>
     </div>
   </div>

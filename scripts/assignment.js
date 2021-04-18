@@ -1,15 +1,16 @@
-// Part 2 Animation
-function typingEffect(txt) {
-    var i = 0;
+// Part 2
+var bSecondTxt = document.getElementById('b-second-txt')
+
+var i = 0;
+setTimeout(function () { typingEffect('ARTISTIC \n ODESSEY? \n VINEYARD \n VOYAGE?', bSecondTxt) }, 1500)
+
+function typingEffect(txt, place) {
     if (i < txt.length) {
-        document.getElementById("b-first-text").innerHTML += txt.charAt(i);
+        place.innerHTML += txt.charAt(i);
         i++;
-        setTimeout(typingEffect(txt.length), 50) // TODO:
+        setTimeout(function () { typingEffect(txt, place) }, 50)
     }
 }
-
-typingEffect("Artistic")
-
 
 // Part 3
 var allPages = document.querySelectorAll('.tab-content div[id^="page-"]')
@@ -121,7 +122,7 @@ function conditions() {
 
 // Clear form on refresh
 function clearFormInputs() {
-    date.value = ''
+    //date.value = ''
     cookingTrue.checked = false
     cookingFalse.checked = false
     agreement.checked = false
